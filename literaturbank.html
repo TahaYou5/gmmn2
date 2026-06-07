@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Literaturbank | GMMN e.V.</title>
+<link rel="stylesheet" href="style.css"/>
+<script>function filterCat(cat){document.querySelectorAll("[data-cat]").forEach(c=>{c.style.display=(cat==="all"||c.dataset.cat===cat)?"":"none"});document.querySelectorAll(".filter-btn").forEach(b=>{b.className="btn filter-btn "+(b.dataset.val===cat?"btn-solid":"btn-ghost")});}</script>
+</head>
+<body>
+<div id="progress-bar"></div>
+<div id="cursor-glow"></div>
+<nav id="navbar" class="scrolled">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-badge">G</div>
+    <span class="nav-logo-text">GMMN e.V. &nbsp;·&nbsp; Muslimische Mediziner &nbsp;·&nbsp; Norddeutschland</span>
+  </a>
+  <ul class="nav-links"><li><a href="ueber-uns.html">Über uns</a></li><li><a href="veranstaltungen.html">Veranstaltungen</a></li><li><a href="mentoring.html">Mentoring</a></li><li><a href="partnerschaft.html">Partnerschaft</a></li><li><a href="jugendforum.html">Jugendforum</a></li><li><a href="humanitaere-hilfe.html">Humanitäre Hilfe</a></li><li><a href="literaturbank.html" class='active'>Literaturbank</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+  <div class="nav-ctas">
+    <a href="kontakt.html" class="btn btn-ghost">Kontakt</a>
+    <a href="mentoring.html" class="btn btn-solid">Mitglied werden</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="veranstaltungen.html">Veranstaltungen</a></li><li><a href="mentoring.html">Mentoring</a></li><li><a href="partnerschaft.html">Partnerschaft</a></li><li><a href="jugendforum.html">Jugendforum</a></li><li><a href="humanitaere-hilfe.html">Humanitäre Hilfe</a></li><li><a href="literaturbank.html">Literaturbank</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+  <div class="mobile-ctas">
+    <a href="kontakt.html" class="btn btn-ghost" style="flex:1">Kontakt</a>
+    <a href="mentoring.html" class="btn btn-solid" style="flex:1">Mitglied werden</a>
+  </div>
+</div>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Startseite</a><span>›</span><span class="current">Literaturbank</span></div>
+    <div class="page-hero-eyebrow">Wissen teilen · Gemeinsam wachsen</div>
+    <h1>Literaturbank</h1>
+    <p>Eine kuratierte Sammlung von Ressourcen für muslimische Mediziner — Bücher, Leitlinien, Forschungsartikel und mehr.</p>
+  </div>
+</div>
+<section class="bg-dark">
+  <div class="container">
+    <div class="section-header reveal"><div class="section-eyebrow">Ressourcen</div><h2 class="section-title">Ausgewählte Literatur &amp; Materialien</h2><p class="section-subtitle">Von Mitgliedern für Mitglieder zusammengestellt — klinisch relevant, akademisch hochwertig.</p></div>
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2.5rem" class="reveal">
+      <button onclick="filterCat('all')" class="btn filter-btn btn-solid" data-val="all">Alle</button>
+      <button onclick="filterCat('klinik')" class="btn filter-btn btn-ghost" data-val="klinik">Klinische Leitfäden</button>
+      <button onclick="filterCat('karriere')" class="btn filter-btn btn-ghost" data-val="karriere">Karriere</button>
+      <button onclick="filterCat('ethik')" class="btn filter-btn btn-ghost" data-val="ethik">Medizinethik</button>
+      <button onclick="filterCat('forschung')" class="btn filter-btn btn-ghost" data-val="forschung">Forschung</button>
+    </div>
+    <div class="grid-3">
+      <div class="dark-card reveal" data-cat="karriere"><span class="tag">Karriere</span><h3 style="font-size:1rem;font-weight:700;color:#fff;margin:.75rem 0 .5rem">Der Weg zum Facharzt in Deutschland</h3><p style="font-size:.88rem;color:var(--muted);margin-bottom:1rem">Ein strukturierter Leitfaden für Weiterbildungsschritte, Approbation und Bewerbungsstrategie.</p><a href="kontakt.html" class="btn btn-ghost" style="font-size:.8rem;padding:.4rem .9rem">Zugang anfragen</a></div>
+      <div class="dark-card reveal" data-delay="1" data-cat="ethik"><span class="tag">Medizinethik</span><h3 style="font-size:1rem;font-weight:700;color:#fff;margin:.75rem 0 .5rem">Islamische Medizinethik — Grundlagen</h3><p style="font-size:.88rem;color:var(--muted);margin-bottom:1rem">Einführung in die ethischen Prinzipien islamischer Medizin und ihre Anwendung im klinischen Alltag.</p><a href="kontakt.html" class="btn btn-ghost" style="font-size:.8rem;padding:.4rem .9rem">Zugang anfragen</a></div>
+      <div class="dark-card reveal" data-delay="2" data-cat="forschung"><span class="tag">Forschung</span><h3 style="font-size:1rem;font-weight:700;color:#fff;margin:.75rem 0 .5rem">Erste Publikation — Schritt für Schritt</h3><p style="font-size:.88rem;color:var(--muted);margin-bottom:1rem">Von der Idee bis zum veröffentlichten Artikel: Praxisleitfaden für Einsteiger in die medizinische Forschung.</p><a href="kontakt.html" class="btn btn-ghost" style="font-size:.8rem;padding:.4rem .9rem">Zugang anfragen</a></div>
+      <div class="dark-card reveal" data-cat="klinik"><span class="tag">Klinische Leitfäden</span><h3 style="font-size:1rem;font-weight:700;color:#fff;margin:.75rem 0 .5rem">AWMF-Leitlinien Kompendium</h3><p style="font-size:.88rem;color:var(--muted);margin-bottom:1rem">Kuratierte Auswahl der wichtigsten deutschen Leitlinien für den klinischen Alltag.</p><a href="kontakt.html" class="btn btn-ghost" style="font-size:.8rem;padding:.4rem .9rem">Zugang anfragen</a></div>
+      <div class="dark-card reveal" data-delay="1" data-cat="karriere"><span class="tag">Karriere</span><h3 style="font-size:1rem;font-weight:700;color:#fff;margin:.75rem 0 .5rem">Anerkennung ausländischer Abschlüsse</h3><p style="font-size:.88rem;color:var(--muted);margin-bottom:1rem">Erfahrungsberichte und praktische Hinweise für internationale Ärzte in Deutschland.</p><a href="kontakt.html" class="btn btn-ghost" style="font-size:.8rem;padding:.4rem .9rem">Zugang anfragen</a></div>
+      <div class="dark-card reveal" data-delay="2" data-cat="ethik"><span class="tag">Medizinethik</span><h3 style="font-size:1rem;font-weight:700;color:#fff;margin:.75rem 0 .5rem">Patientengespräch &amp; Kulturkompetenz</h3><p style="font-size:.88rem;color:var(--muted);margin-bottom:1rem">Wie kulturelle und religiöse Sensibilität die Arzt-Patienten-Beziehung stärkt.</p><a href="kontakt.html" class="btn btn-ghost" style="font-size:.8rem;padding:.4rem .9rem">Zugang anfragen</a></div>
+    </div>
+  </div>
+</section>
+<section class="bg-surface">
+  <div class="container">
+    <div style="background:linear-gradient(135deg,#0f1e1c,#0a1514);border-radius:20px;padding:3rem;text-align:center;border:1px solid rgba(26,122,110,.2);position:relative;overflow:hidden" class="reveal">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(26,122,110,.12) 0%,transparent 70%)"></div>
+      <div style="position:relative;z-index:1">
+        <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;margin-bottom:.75rem;color:#fff">Ressource einreichen</h2>
+        <p style="color:var(--muted);max-width:500px;margin:0 auto 1.75rem;font-size:.98rem">Hast du ein wertvolles Buch, einen Artikel oder eine Ressource, die du mit der Gemeinschaft teilen möchtest?</p>
+        <a href="kontakt.html" class="btn btn-solid btn-lg">Einreichen</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-banner">
+  <h2 class="reveal">Teil von etwas Bedeutungsvollem sein.</h2>
+  <p class="reveal" data-delay="1">Werde Teil einer Gemeinschaft, die die Zukunft der Medizin in Norddeutschland mit Wissen, Integrität und Einsatz gestaltet.</p>
+  <div class="cta-btns reveal" data-delay="2">
+    <a href="mentoring.html" class="btn btn-solid btn-lg" style="background:#fff;color:var(--teal)">GMMN beitreten</a>
+    <a href="kontakt.html" class="btn btn-outline-white btn-lg">Kontakt aufnehmen</a>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:.75rem;display:inline-flex">
+          <div class="nav-logo-badge">G</div>
+          <span style="font-size:.78rem;font-weight:500;color:rgba(255,255,255,.3);margin-left:.65rem">GMMN e.V.</span>
+        </a>
+        <p>Muslimische Mediziner in Norddeutschland durch Bildung, Mentoring, Forschung und humanitären Dienst stärken.</p>
+      </div>
+      <div class="footer-col"><h4>Erkunden</h4><ul>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+        <li><a href="mentoring.html">Mentoring</a></li>
+        <li><a href="partnerschaft.html">Partnerschaft</a></li>
+        <li><a href="jugendforum.html">Jugendforum</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Ressourcen</h4><ul>
+        <li><a href="literaturbank.html">Literaturbank</a></li>
+        <li><a href="humanitaere-hilfe.html">Humanitäre Hilfe</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Kontakt</h4><ul>
+        <li><span>Hamburg, Norddeutschland</span></li>
+        <li><a href="mailto:info@gmmn.de">info@gmmn.de</a></li>
+        <li><span>+49 (0) 40 000 0000</span></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© Gesellschaft Muslimischer Mediziner in Norddeutschland (GMMN e.V.). Alle Rechte vorbehalten.</p>
+      <p>Für Wirkung gestaltet. Mit Vertrauen gebaut.</p>
+    </div>
+  </div>
+</footer>
+<button id="back-top" aria-label="Nach oben">↑</button>
+<script src="shared.js"></script>
+</body>
+</html>
